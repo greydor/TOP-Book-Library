@@ -1,7 +1,129 @@
-.visible {
-    display: block;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.library {
+    background-color: rgb(252, 242, 230);
+    width: 800px;
+    padding: 20px;
 }
 
 form {
     display: none;
+    margin-bottom: 30px;
+}
+
+.visible {
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(104, 50, 50);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+table button {
+    margin: 0 10px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+.input-text {
+    width: 300px;
+}
+
+.input-container-top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-pages {
+    width: 100px;
+}
+
+.input-fieldset-container {
+    display: flex;
+}
+
+.input-read-no {
+    margin-left: 40px;
+    margin-right: 5px;
+}
+
+.input-read-yes {
+    margin-right: 5px;
+}
+
+.input-container-bottom {
+    display: flex;
+}
+
+.input-container-submit {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.btn-read {
+    width: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th {
+    border-bottom: 3px solid black;
+    text-align: left;
+    padding-bottom: 5px;
+    text-overflow: wrap;
+    font-size: 1.1rem;
+}
+
+tr {
+    height: 2.5rem;
+}
+
+tr button {
+    height: 1.8rem;
+}
+
+.table-body tr:nth-child(even) {
+    background-color: rgb(216, 216, 216);
+}
+
+.table-column-pages {
+    width: 70px;
+}
+
+.table-column-title {
+    width: 290px;
+}
+
+.table-column-author {
+    width: 220px;
+}
+
+.table-column-read {
+    width: 100px;
 }

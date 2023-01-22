@@ -10,19 +10,50 @@
     <title>Library</title>
   </head>
   <body>
-    <h1><a href="https://github.com/greydor">Greydor's</a> Library</h1>
-    <button type="button" id="add-book">Add Book</button>
-    <form action="/">
-      <label for="title">Book title:</label>
-      <input type="text" name="title" id="title">
+    <div class="library">
+      <h1><a href="https://github.com/greydor">Greydor's</a> Library</h1>
+      <div class="button-container">
+        <button type="button" id="add-book">Add Book</button>
+      </div>
+      <form action="/">
+        <div class="input-container-top">
+          <label for="title">Book title:</label>
+          <input type="text" name="title" id="title" class="input-text" />
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" class="input-text" />
+          <label for="pages"># of pages:</label>
+          <input type="number" name="pages" id="pages" class="input-pages" />
+        </div>
 
-      <label for="author">Author:</label>
-      <input type="text" name="author" id="author">
-
-      <label for="pages"># of pages:</label>
-      <input type="number" name="pages" id="pages">
-
-      <button type="submit" id="submit-book">Submit</button>
-    </form>
+        <div class="input-container-bottom">
+          <div class="input-fieldset-container">
+            <fieldset>
+              <legend>Have you read this book?</legend>
+              <label for="read-yes" class="input-read-yes">Yes</label>
+              <input type="radio" id="read-yes" name="has-read" value="true" />
+              <label for="read-no" class="input-read-no">No</label>
+              <input type="radio" id="read-no" name="has-read" value="false" />
+            </fieldset>
+          </div>
+          <div class="input-container-submit">
+            <button type="submit" id="submit-book" class="input-btn-submit">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th class="table-column-title">Title</th>
+            <th class="table-column-author">Author</th>
+            <th class="table-column-pages">Pages</th>
+            <th class="table-column-read">Read? (Y/N)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+      </table>
+    </div>
   </body>
 </html>
