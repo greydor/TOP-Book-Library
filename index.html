@@ -16,40 +16,70 @@
     <title>Library</title>
   </head>
   <body>
-      <button type="button" id="add-book" class="btn-add-book"><img src="image/book-plus-outline.svg" alt="Book icon with plus symbol"></button>    
+    <button type="button" id="add-book" class="btn-add-book">
+      <img src="image/book-plus-outline.svg" alt="Book icon with plus symbol" />
+    </button>
 
-      <div class="overlay">
-        <form action="/">
-          <div class="input-container-top">
-            <label for="title">Book title:</label>
-            <input type="text" name="title" id="title" class="input-text" required/>
-            <label for="author">Author:</label>
-            <input type="text" name="author" id="author" class="input-text" required/>
-            <label for="pages">No. of Pages:</label>
-            <input type="number" name="pages" id="pages" class="input-pages" required/>
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="readSwitch" name="has-read">
-              <label class="custom-control-label" for="readSwitch">Read</label>
-            </div>
+    <div class="overlay">
+      <form action="/">
+        <div class="input-container-top">
+          <label for="title">Book title:</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="input-text"
+            required
+          />
+          <label for="author">Author:</label>
+          <input
+            type="text"
+            name="author"
+            id="author"
+            class="input-text"
+            required
+          />
+          <label for="pages">No. of Pages:</label>
+          <input
+            type="number"
+            name="pages"
+            id="pages"
+            class="input-pages"
+            required
+          />
+          <div class="custom-control custom-switch">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="readSwitch"
+              name="has-read"
+            />
+            <label class="custom-control-label" for="readSwitch">Read</label>
           </div>
-  
-          <div class="input-container-bottom">
+        </div>
 
-            <button type="submit" id="submit-book" class="input-btn-submit btn btn-outline-dark" >
-              Submit
-            </button>
-            <button type="button" id="cancel-form" class="input-btn-cancel btn btn-outline-danger" >
-              Cancel
-            </button>
-
-          </div>
-        </form>
-      </div>
+        <div class="input-container-bottom">
+          <button
+            type="submit"
+            id="submit-book"
+            class="input-btn-submit btn btn-outline-dark"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            id="cancel-form"
+            class="input-btn-cancel btn btn-outline-danger"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
     <div class="body-left"></div>
     <div class="library">
       <h1><a href="https://github.com/greydor">Greydor's</a> Library</h1>
 
-      
       <table>
         <thead>
           <tr>

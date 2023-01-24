@@ -48,7 +48,7 @@ const cancelButton = document.querySelector(".input-btn-cancel");
 cancelButton.addEventListener("click", () => {
   form.reset();
   overlay.style.display = "none";
-})
+});
 
 function addBookToLibrary(bookInfo) {
   const book = new Book();

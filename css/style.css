@@ -59,7 +59,7 @@ h1 {
 
 .btn-add-book {
     border: none;
-    background-color:  rgb(252, 242, 230);
+    background-color: rgb(252, 242, 230);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -67,7 +67,7 @@ h1 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50px; 
+    top: 50px;
     left: 50px;
 }
 
