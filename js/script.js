@@ -23,9 +23,10 @@ myLibrary.push(new Book("Cat in the Hat", "Dr. Seuss", 47, true));
 myLibrary.push(new Book("Royal Assasin", "Robin Hobb", 577, true));
 
 const form = document.querySelector("form");
+const overlay = document.querySelector(".overlay");
 const addBook = document.querySelector("#add-book");
 addBook.addEventListener("click", () => {
-  form.classList.add("visible");
+  overlay.style.display = "flex";
 });
 
 form.addEventListener("submit", (e) => {
@@ -33,16 +34,21 @@ form.addEventListener("submit", (e) => {
   const author = form.author.value;
   const pages = form.pages.value;
   let hasRead = false;
-  if (form["has-read"].value === "true") {
+  if (form["has-read"].checked === true) {
     hasRead = true;
   }
-
+  overlay.style.display = "none";
   const bookInfo = { author, title, pages, hasRead };
   addBookToLibrary(bookInfo);
   e.preventDefault();
   form.reset();
-  form.classList.remove("visible");
 });
+
+const cancelButton = document.querySelector(".input-btn-cancel");
+cancelButton.addEventListener("click", () => {
+  form.reset();
+  overlay.style.display = "none";
+})
 
 function addBookToLibrary(bookInfo) {
   const book = new Book();
@@ -74,8 +80,9 @@ function addBookToTable(book, index) {
 
   const btnRead = document.createElement("button");
   btnRead.setAttribute("type", "button");
-  btnRead.id = "btn-read";
   btnRead.classList.add("btn-read");
+  btnRead.classList.add("btn");
+  btnRead.classList.add("btn-outline-dark");
   if (book.hasRead === true) {
     btnRead.textContent = "Yes";
   } else {
@@ -90,8 +97,9 @@ function addBookToTable(book, index) {
   const cellButton = row.insertCell(4);
   const btnDelete = document.createElement("button");
   btnDelete.setAttribute("type", "button");
-  btnDelete.id = "btn-delete";
-  btnRead.classList.add("btn-delete");
+  btnDelete.classList.add("btn-delete");
+  btnDelete.classList.add("btn");
+  btnDelete.classList.add("btn-outline-danger");
   btnDelete.textContent = "Delete";
   btnDelete.addEventListener("click", () => {
     myLibrary.splice(index, 1);
