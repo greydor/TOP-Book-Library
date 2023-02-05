@@ -1,21 +1,24 @@
 const myLibrary = [];
 
-function Book(title, author, pages, hasRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.hasRead = hasRead;
-}
-
-Book.prototype.info = function bookInfo() {
-  let readStatement;
-  if (this.hasRead === true) {
-    readStatement = "has been read";
-  } else {
-    readStatement = "not read yet";
+class Book {
+  constructor(title, author, pages, hasRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.hasRead = hasRead;
   }
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatement}`;
-};
+
+  bookInfo() {
+    let readStatement;
+    if (this.hasRead === true) {
+      readStatement = "has been read";
+    } else {
+      readStatement = "not read yet";
+    }
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatement}`;
+  }
+
+}
 
 myLibrary.push(new Book("Game of Thrones", "George R.R. Martin", 793, true));
 myLibrary.push(new Book("The Way of Kings", "Brandon Sanderson", 942, true));
